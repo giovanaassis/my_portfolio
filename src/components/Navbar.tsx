@@ -1,6 +1,6 @@
 import Brasil from "@/assets/brasil.png";
 import UK from "@/assets/united-kingdom.png";
-import { MoonIcon } from "lucide-react";
+import { MoonIcon, MenuIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 
 function Navbar() {
@@ -12,6 +12,7 @@ function Navbar() {
     "tecnologias",
     "contato",
   ];
+  const [openMenu, setOpenMenu] = useState<boolean>(true);
 
   return (
     <nav className="flex w-full items-center justify-between px-15 pt-7">
@@ -21,8 +22,8 @@ function Navbar() {
         <img src={UK} alt="united-kingdom-flag" width={40} />
       </div>
 
-      {/* MENUBAR */}
-      <ul className="relative h-[50px] px-5 border-2 border-primary-purple rounded-full flex items-center justify-center gap-5">
+      {/* MENUBAR FOR BIG SCREENS */}
+      <ul className="relative h-[50px] px-5 border-2 border-primary-purple rounded-full lg:flex items-center justify-center gap-5 hidden">
         {navItems.map((item, index) => (
           <li
             key={index}
@@ -40,6 +41,27 @@ function Navbar() {
       <button>
         <MoonIcon />
       </button>
+
+      {/* MENUBAR FOR MOBILE */}
+      {openMenu ? (
+        <XIcon
+          className="text-secondary-purple cursor-pointer lg:hidden"
+          size={40}
+          onClick={() => setOpenMenu(!openMenu)}
+        />
+      ) : (
+        <MenuIcon
+          className="text-secondary-purple cursor-pointer lg:hidden"
+          size={40}
+          onClick={() => setOpenMenu(!openMenu)}
+        />
+      )}
+
+      <ul className={`navbarMobile lg:hidden ${openMenu ? "activeMenu" : ""}`}>
+        {navItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </nav>
   );
 }
