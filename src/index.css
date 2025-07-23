@@ -1,18 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 @import "tw-animate-css";
 /* font-family: "Bakbak One", sans-serif; */
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary-purple: #7512D2;
+  --color-secondary-purple: #3C096C;
+}
 
 @layer base {
   body {
     background-color: #e5d8ec;
     font-family: "Montserrat", sans-serif;
   }
-
+  
   button {
     cursor: pointer;
+  }
+
+  li {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 1;
+    padding: 5px 10px;
+  }
+}
+
+@layer components {
+  .activeNavItem {
+    background-color: var(--color-primary-purple);
+    color: white;
+    border-radius: 20px;
   }
 }
 
