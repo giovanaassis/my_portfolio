@@ -26,6 +26,7 @@
     font-weight: 600;
     z-index: 1;
     padding: 5px 10px;
+    border-radius: 20px;
   }
 }
 
@@ -33,7 +34,6 @@
   .activeNavItem {
     background-color: var(--color-primary-purple);
     color: white;
-    border-radius: 20px;
   }
 }
 

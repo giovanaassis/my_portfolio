@@ -27,7 +27,7 @@ function Navbar() {
           <li
             key={index}
             onClick={() => setActiveItem(index)}
-            className={`transition-all duration-200 ${
+            className={`transition-all duration-300 ${
               activeItem === index ? "activeNavItem" : ""
             }`}
           >
