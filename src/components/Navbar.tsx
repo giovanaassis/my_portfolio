@@ -12,7 +12,7 @@ function Navbar() {
     "tecnologias",
     "contato",
   ];
-  const [openMenu, setOpenMenu] = useState<boolean>(true);
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
     <nav className="flex w-full items-center justify-between px-15 pt-7">
@@ -45,7 +45,7 @@ function Navbar() {
       {/* MENUBAR FOR MOBILE */}
       {openMenu ? (
         <XIcon
-          className="text-secondary-purple cursor-pointer lg:hidden"
+          className="text-secondary-purple cursor-pointer lg:hidden z-2"
           size={40}
           onClick={() => setOpenMenu(!openMenu)}
         />

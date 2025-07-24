@@ -2,19 +2,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
-/* font-family: "Bakbak One", sans-serif; */
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-primary-purple: #7512d2;
   --color-secondary-purple: #3c096c;
+  --color-highlight: linear-gradient(90deg,#3C096C 0%, #7512D2 100%);
+
+  --font-mont: "Montserrat", sans-serif;
+  --font-bak: "Bakbak One", sans-serif;
+
+  --animate-scroll: scroll 5s linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - 32px));
+    }
+  }
 }
 
 @layer base {
   body {
     background-color: #e5d8ec;
-    font-family: "Montserrat", sans-serif;
-    overflow: hidden;
+    font-family: var(--font-mont);
+    overflow-x: hidden;
   }
 
   button {
@@ -41,12 +53,12 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1;
     min-height: 100vh;
-    background-color: #3c096c71;
+    background-color: #c588ff;
     color: var(--color-secondary-purple);
     padding-top: 10rem;
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,38 +70,24 @@
   .activeMenu {
     transform: translateX(0%);
   }
-}
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  .highlightButton {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: var(--color-highlight);
+    padding: 5px;
+    letter-spacing: 2px;
+    font-family: var(--font-bak);
+  }
+
+  .iconsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    user-select: none;
+    flex-shrink: 0;
+    animation: var(--animate-scroll);
+  }
 }
