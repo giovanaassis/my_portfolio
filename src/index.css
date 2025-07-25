@@ -103,6 +103,7 @@
   .highlightText {
     color: var(--color-primary-purple);
     font-weight: 600;
+    font-style: italic;
   }
 
   .primaryButton {

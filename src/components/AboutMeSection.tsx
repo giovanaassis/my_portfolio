@@ -5,14 +5,17 @@ function AboutMeSection() {
     <section>
       <h1 className="highlightTitle mx-auto">Quem sou eu?</h1>
 
-      <div className="flex flex-col gap-10 items-center justify-center mt-10 text-center leading-9">
-        <img
-          src={ProfileImage}
-          alt="my-profile-image"
-          className="rounded-full w-60 h-60 border-3 border-primary-purple"
-        />
+      <div className="flex flex-col md:flex-row gap-10 items-center justify-center mt-10 text-center leading-9">
 
-        <div>
+        <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-primary-purple shrink-0">
+          <img
+            src={ProfileImage}
+            alt="my-profile-image"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="w-[300px] md:w-[500px] md:text-left">
           <p>
             Me chamo Giovana, sou graduanda em{" "}
             <span className="highlightText">
@@ -38,7 +41,7 @@ function AboutMeSection() {
             <span className="highlightText"> Desenvolvedora JR / Estágio.</span>
           </p>
 
-          <a href="/cv-giovana-assis.pdf" download="cv-giovana-assis.pdf" >
+          <a href="/cv-giovana-assis.pdf" download="cv-giovana-assis.pdf">
             <button className="primaryButton">baixar currículo</button>
           </a>
         </div>

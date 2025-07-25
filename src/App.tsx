@@ -14,7 +14,7 @@ function App() {
 
         <AboutMeSection />
         <ProjectsSection />
-        
+
       </main>
     </>
   );
