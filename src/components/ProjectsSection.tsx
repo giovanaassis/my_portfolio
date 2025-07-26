@@ -27,8 +27,10 @@ function ProjectsSection() {
             <ProjectCard />
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        
+        <CarouselPrevious className="w-10 h-10 bg-primary-purple text-white hover:bg-primary-dark" />
+
+        <CarouselNext className="w-10 h-10 bg-primary-purple text-white hover:bg-primary-dark" />
       </Carousel>
     </section>
   );

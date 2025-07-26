@@ -8,6 +8,7 @@
 @theme {
   --color-primary-purple: #7512d2;
   --color-secondary-purple: #3c096c;
+  --color-light-purple: #c588ff;
   --color-dark-purple: #11001C;
   --color-highlight: linear-gradient(90deg,#3C096C 0%, #7512D2 100%);
 
@@ -63,7 +64,7 @@
     right: 0;
     z-index: 1;
     min-height: 100vh;
-    background-color: #c588ff;
+    background-color: var(--color-light-purple);
     color: var(--color-secondary-purple);
     padding-top: 10rem;
     width: 50%;
