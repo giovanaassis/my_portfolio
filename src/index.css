@@ -8,6 +8,7 @@
 @theme {
   --color-primary-purple: #7512d2;
   --color-secondary-purple: #3c096c;
+  --color-dark-purple: #11001C;
   --color-highlight: linear-gradient(90deg,#3C096C 0%, #7512D2 100%);
 
   --font-mont: "Montserrat", sans-serif;
@@ -118,5 +119,12 @@
   .primaryButton:hover {
     background-color: white;
     color: var(--color-primary-purple);
+  }
+
+  .secondaryButton {
+    background-color: var(--color-dark-purple);
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
   }
 }
