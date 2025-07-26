@@ -10,7 +10,7 @@ import {
 function ProjectsSection() {
   return (
     <section>
-      <h1 className="highlightTitle mx-auto">Projetos para chamar de meu.</h1>
+      <h1 className="highlightTitle mx-auto">Projetos para chamar de meu</h1>
 
       <Carousel
         className="mt-10 w-full max-w-xs md:max-w-lg lg:max-w-4xl mx-auto"
@@ -27,10 +27,10 @@ function ProjectsSection() {
             <ProjectCard />
           </CarouselItem>
         </CarouselContent>
-        
-        <CarouselPrevious className="w-10 h-10 bg-primary-purple text-white hover:bg-primary-dark" />
 
-        <CarouselNext className="w-10 h-10 bg-primary-purple text-white hover:bg-primary-dark" />
+        <CarouselPrevious className="w-10 h-10 bg-primary-purple text-white hover:bg-secondary-purple" />
+
+        <CarouselNext className="w-10 h-10 bg-primary-purple text-white hover:bg-secondary-purple" />
       </Carousel>
     </section>
   );

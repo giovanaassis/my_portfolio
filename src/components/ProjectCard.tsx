@@ -8,16 +8,17 @@ import ProjectImage from "@/assets/absolute_print.png";
 
 function ProjectCard() {
   return (
-    <div className="flex flex-col gap-10 text-dark-purple items-center justify-center p-4 bg-white rounded-xl">
-      <div>
-        <img
-          src={ProjectImage}
-          alt="project-image"
-          className="rounded-2xl shadow-xl"
-        />
-      </div>
+    <div className="flex flex-col gap-10 text-dark-purple items-center justify-center p-4 bg-white rounded-xl lg:flex-row">
 
-      <div className="flex flex-col gap-7">
+        <div className="lg:h-[400px] lg:w-[50%] self-start">
+          <img
+            src={ProjectImage}
+            alt="project-image"
+            className="rounded-2xl shadow-2xl h-full"
+          />
+        </div>
+
+      <div className="flex flex-col gap-7 lg:w-[45%]">
         {/* PROJECT TITLE */}
         <h2 className="text-4xl font-semibold">
           Absolute Game
@@ -41,8 +42,8 @@ function ProjectCard() {
 
         {/* PROJECT LINKS */}
         <div className="flex gap-5">
-          <button className="secondaryButton w-[50%]">código do projeto</button>
-          <button className="secondaryButton w-[50%]">link do projeto</button>
+          <button className="secondaryButton w-[50%] transition-transform duration-200 md:hover:scale-105">código do projeto</button>
+          <button className="secondaryButton w-[50%] transition-transform duration-200 md:hover:scale-105">link do projeto</button>
         </div>
       </div>
     </div>
