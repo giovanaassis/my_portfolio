@@ -53,7 +53,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
         <img
           src={image}
           alt={`image-project-${title}`}
-          className="rounded-2xl shadow-2xl h-full"
+          className="rounded-2xl shadow-2xl h-full object-cover"
         />
       </div>
 
