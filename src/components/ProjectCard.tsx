@@ -8,7 +8,7 @@ import {
 import { RiNextjsFill } from "react-icons/ri";
 import type { ProjectType } from "@/@types/project";
 
-const handleTechs = (tech: string) => {
+const getTechIcons = (tech: string) => {
   switch (tech) {
     case "html":
       return <FaHtml5 />;
@@ -45,14 +45,14 @@ const handleTechs = (tech: string) => {
 function ProjectCard({ project }: { project: ProjectType }) {
   const { title, description, image, techs, repo, link } = project;
 
-  const techComponents = techs.map((tech) => handleTechs(tech));
+  const techComponents = techs.map((tech) => getTechIcons(tech));
 
   return (
     <div className="flex flex-col gap-10 text-dark-purple items-center justify-center p-4 bg-white rounded-xl lg:flex-row">
       <div className="lg:h-[400px] lg:w-[50%] self-start">
         <img
           src={image}
-          alt="project-image"
+          alt={`image-project-${title}`}
           className="rounded-2xl shadow-2xl h-full"
         />
       </div>
@@ -74,6 +74,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
           <a
             href={repo}
             target="_blank"
+            rel="noopener noreferrer"
             className="w-[50%] h-[70px] transition-transform duration-200 md:hover:scale-105"
           >
             <button className="secondaryButton h-full">
@@ -83,6 +84,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
           <a
             href={link}
             target="_blank"
+            rel="noopener noreferrer"
             className="w-[50%] h-[70px] transition-transform duration-200 md:hover:scale-105"
           >
             <button className="secondaryButton h-full">link do projeto</button>
