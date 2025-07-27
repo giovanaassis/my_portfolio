@@ -1,49 +1,92 @@
-import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import {
-  //   BiLogoTypescript,
+  BiLogoTypescript,
   BiLogoJavascript,
-  //   BiLogoTailwindCss,
+  BiLogoTailwindCss,
+  BiLogoPostgresql,
 } from "react-icons/bi";
-import ProjectImage from "@/assets/absolute_print.png";
+import { RiNextjsFill } from "react-icons/ri";
+import type { ProjectType } from "@/@types/project";
 
-function ProjectCard() {
+const handleTechs = (tech: string) => {
+  switch (tech) {
+    case "html":
+      return <FaHtml5 />;
+
+    case "css":
+      return <FaCss3Alt />;
+
+    case "javascript":
+      return <BiLogoJavascript />;
+
+    case "typescript":
+      return <BiLogoTypescript />;
+
+    case "tailwind":
+      return <BiLogoTailwindCss />;
+
+    case "react":
+      return <FaReact />;
+
+    case "nodejs":
+      return <FaNodeJs />;
+
+    case "nextjs":
+      return <RiNextjsFill />;
+
+    case "postgresql":
+      return <BiLogoPostgresql />;
+
+    default:
+      return null;
+  }
+};
+
+function ProjectCard({ project }: { project: ProjectType }) {
+  const { title, description, image, techs, repo, link } = project;
+
+  const techComponents = techs.map((tech) => handleTechs(tech));
+
   return (
     <div className="flex flex-col gap-10 text-dark-purple items-center justify-center p-4 bg-white rounded-xl lg:flex-row">
+      <div className="lg:h-[400px] lg:w-[50%] self-start">
+        <img
+          src={image}
+          alt="project-image"
+          className="rounded-2xl shadow-2xl h-full"
+        />
+      </div>
 
-        <div className="lg:h-[400px] lg:w-[50%] self-start">
-          <img
-            src={ProjectImage}
-            alt="project-image"
-            className="rounded-2xl shadow-2xl h-full"
-          />
-        </div>
-
-      <div className="flex flex-col gap-7 lg:w-[45%]">
+      <div className="flex flex-col gap-7 lg:w-[45%] self-start">
         {/* PROJECT TITLE */}
-        <h2 className="text-4xl font-semibold">
-          Absolute Game
-        </h2>
+        <h2 className="text-4xl font-semibold">{title}</h2>
 
         {/* PROJECT DESCRIPTION */}
-        <p className="tracking-widest">
-          Um projeto simples e divertido para ajudar a treinar e desenvolver seu
-          ouvido absoluto! Ele reproduz uma nota musical aleatória, e o usuário
-          deve adivinhar qual é. Ideal para músicos e entusiastas que desejam
-          aprimorar sua percepção musical.
-        </p>
+        <p className="tracking-widest">{description}</p>
 
         {/* PROJECT TECH */}
         <div className="flex gap-5 text-4xl text-secondary-purple">
-          <FaHtml5 />
-          <FaCss3Alt />
-          <BiLogoJavascript />
-          <FaReact />
+          {techComponents.map((tech) => tech)}
         </div>
 
         {/* PROJECT LINKS */}
         <div className="flex gap-5">
-          <button className="secondaryButton w-[50%] transition-transform duration-200 md:hover:scale-105">código do projeto</button>
-          <button className="secondaryButton w-[50%] transition-transform duration-200 md:hover:scale-105">link do projeto</button>
+          <a
+            href={repo}
+            target="_blank"
+            className="w-[50%] h-[70px] transition-transform duration-200 md:hover:scale-105"
+          >
+            <button className="secondaryButton h-full">
+              código do projeto
+            </button>
+          </a>
+          <a
+            href={link}
+            target="_blank"
+            className="w-[50%] h-[70px] transition-transform duration-200 md:hover:scale-105"
+          >
+            <button className="secondaryButton h-full">link do projeto</button>
+          </a>
         </div>
       </div>
     </div>

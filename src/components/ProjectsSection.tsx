@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { projects } from "@/data/projects";
 
 function ProjectsSection() {
   return (
@@ -17,15 +18,14 @@ function ProjectsSection() {
         opts={{ loop: true }}
       >
         <CarouselContent>
-          <CarouselItem>
+          {/* <CarouselItem>
             <ProjectCard />
-          </CarouselItem>
-          <CarouselItem>
-            <ProjectCard />
-          </CarouselItem>
-          <CarouselItem>
-            <ProjectCard />
-          </CarouselItem>
+          </CarouselItem> */}
+          {projects.map((project) => (
+            <CarouselItem key={project.id}>
+              <ProjectCard project={project} />
+            </CarouselItem>
+          ))}
         </CarouselContent>
 
         <CarouselPrevious className="w-10 h-10 bg-primary-purple text-white hover:bg-secondary-purple" />
