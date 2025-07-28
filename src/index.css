@@ -147,4 +147,31 @@
     gap: 20px;
     font-weight: 500;
   }
+
+  .tertiaryButton {
+    background-color: var(--color-light-purple);
+    color: var(--color-secondary-purple);
+    font-size: 1.3rem;
+    border-radius: 5px;
+    width: 20rem;
+    border: 2px solid transparent;
+    transition: all .2s ease;
+  }
+
+  .tertiaryButton:hover {
+    border: 2px solid var(--color-secondary-purple);
+  }
+
+  .inputs {
+    border: 2px solid lightgray;
+    outline: 0;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .inputs:focus-within {
+    border: 2px solid var(--color-secondary-purple);
+  }
 }
