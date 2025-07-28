@@ -5,7 +5,7 @@ function AboutMeSection() {
     <section>
       <h1 className="highlightTitle mx-auto">Quem sou eu?</h1>
 
-      <div className="flex flex-col md:flex-row gap-10 items-center justify-center mt-10 text-center leading-9">
+      <div className="flex flex-col md:flex-row gap-10 items-center justify-center mt-20 text-center leading-9">
 
         <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-primary-purple shrink-0">
           <img

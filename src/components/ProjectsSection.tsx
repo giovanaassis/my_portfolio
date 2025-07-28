@@ -14,7 +14,7 @@ function ProjectsSection() {
       <h1 className="highlightTitle mx-auto">Projetos para chamar de meu</h1>
 
       <Carousel
-        className="mt-10 w-full max-w-xs md:max-w-lg lg:max-w-4xl mx-auto"
+        className="mt-20 w-full max-w-xs md:max-w-lg lg:max-w-4xl mx-auto"
         opts={{ loop: true }}
       >
         <CarouselContent>

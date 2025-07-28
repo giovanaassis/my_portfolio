@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutMeSection from "./components/AboutMeSection";
 import ProjectsSection from "./components/ProjectsSection";
+import TechStackSection from "./components/TechStackSection";
 
 function App() {
   return (
@@ -10,11 +11,11 @@ function App() {
         <Navbar />
         <HeroSection />
       </header>
-      <main className="flex flex-col items-center justify-center gap-20 my-20 w-[70%] mx-auto">
+      <main className="flex flex-col items-center justify-center gap-50 my-20 w-[70%] mx-auto">
 
         <AboutMeSection />
         <ProjectsSection />
-
+        <TechStackSection />
       </main>
     </>
   );
