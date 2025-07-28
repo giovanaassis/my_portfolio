@@ -19,20 +19,20 @@ function TechStackSection() {
     <section>
       <h1 className="highlightTitle mx-auto">Tecnologias que uso</h1>
 
-      <div className="flex flex-col items-center justify-center gap-10 mt-20">
+      <div className="flex flex-col items-center justify-center md:items-start gap-10 mt-20 md:flex-row">
         <div>
-          <h3>frontend</h3>
-          <div className="techStacks"> 
+          <h3 className="md:text-4xl">frontend</h3>
+          <div className="techStacks">
             {frontendStack.map((stack) => (
               <span>{stack}</span>
             ))}
           </div>
         </div>
         {/* STYLED LINE */}
-        <div className="w-50 bg-primary-purple h-2"></div>
+        <div className="w-50 bg-primary-purple h-2 md:w-2 md:h-100"></div>
 
         <div>
-          <h3>backend</h3>
+          <h3 className="md:text-4xl">backend</h3>
           <div className="techStacks">
             {backendStack.map((stack) => (
               <span>{stack}</span>
@@ -40,10 +40,10 @@ function TechStackSection() {
           </div>
         </div>
         {/* STYLED LINE */}
-        <div className="w-50 bg-primary-purple h-2"></div>
+        <div className="w-50 bg-primary-purple h-2 md:w-2 md:h-100"></div>
 
         <div>
-          <h3>outros</h3>
+          <h3 className="md:text-4xl">outros</h3>
           <div className="techStacks">
             {othersStack.map((stack) => (
               <span>{stack}</span>
