@@ -169,6 +169,7 @@
     border-radius: 5px;
     padding: 5px;
     width: 100%;
+    letter-spacing: 2px;
   }
 
   .inputs:focus-within {
