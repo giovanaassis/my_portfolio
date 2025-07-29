@@ -10,7 +10,7 @@ import { projects } from "@/data/projects";
 
 function ProjectsSection() {
   return (
-    <section>
+    <section id="projetos">
       <h1 className="highlightTitle mx-auto">Projetos para chamar de meu</h1>
 
       <Carousel

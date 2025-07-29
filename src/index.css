@@ -9,8 +9,9 @@
   --color-primary-purple: #7512d2;
   --color-secondary-purple: #3c096c;
   --color-light-purple: #c588ff;
-  --color-dark-purple: #11001C;
-  --color-highlight: linear-gradient(90deg,#3C096C 0%, #7512D2 100%);
+  --color-dark-purple: #11001c;
+  --color-background: #e5d8ec;
+  --color-highlight: linear-gradient(90deg, #3c096c 0%, #7512d2 100%);
 
   --font-mont: "Montserrat", sans-serif;
   --font-bak: "Bakbak One", sans-serif;
@@ -25,8 +26,12 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: #e5d8ec;
+    background-color: var(--color-background);
     font-family: var(--font-mont);
     overflow-x: hidden;
   }
@@ -81,7 +86,7 @@
     align-items: center;
     gap: 30px;
     transform: translateX(100%);
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
   .activeMenu {
@@ -120,9 +125,9 @@
     background-color: var(--color-primary-purple);
     color: white;
     font-weight: 500;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border: 2px solid var(--color-primary-purple);
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
   }
 
   .primaryButton:hover {
@@ -155,7 +160,7 @@
     border-radius: 5px;
     width: 20rem;
     border: 2px solid transparent;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
 
   .tertiaryButton:hover {

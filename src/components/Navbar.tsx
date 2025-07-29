@@ -2,9 +2,10 @@ import Brasil from "@/assets/brasil.png";
 import UK from "@/assets/united-kingdom.png";
 import { MoonIcon, MenuIcon, XIcon } from "lucide-react";
 import { useState } from "react";
+import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
 
 function Navbar() {
-  const [activeItem, setActiveItem] = useState<number>(0);
   const navItems: string[] = [
     "home",
     "sobre mim",
@@ -15,7 +16,7 @@ function Navbar() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <nav className="flex w-full items-center justify-between px-15 pt-7">
+    <nav className="flex w-full items-center justify-between px-15 py-7 fixed top-0 z-50 bg-background shadow-md">
       {/* COUNTRY FLAGS */}
       <div className="flex gap-5">
         <img src={Brasil} alt="brazil-flag" width={40} />
@@ -23,19 +24,7 @@ function Navbar() {
       </div>
 
       {/* MENUBAR FOR BIG SCREENS */}
-      <ul className="relative h-[50px] px-5 border-2 border-primary-purple rounded-full lg:flex items-center justify-center gap-5 hidden">
-        {navItems.map((item, index) => (
-          <li
-            key={index}
-            onClick={() => setActiveItem(index)}
-            className={`transition-all duration-300 ${
-              activeItem === index ? "activeNavItem" : ""
-            }`}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+      <DesktopMenu navItems={navItems} />
 
       {/* DARK MODE BUTTON */}
       <button>
@@ -57,11 +46,7 @@ function Navbar() {
         />
       )}
 
-      <ul className={`navbarMobile lg:hidden ${openMenu ? "activeMenu" : ""}`}>
-        {navItems.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <MobileMenu navItems={navItems} openMenu={openMenu} />
     </nav>
   );
 }

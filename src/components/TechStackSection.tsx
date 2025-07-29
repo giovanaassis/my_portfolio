@@ -16,7 +16,7 @@ function TechStackSection() {
   const othersStack: string[] = ["git", "github", "jest", "npm", "figma"];
 
   return (
-    <section>
+    <section id="tecnologias">
       <h1 className="highlightTitle mx-auto">Tecnologias que uso</h1>
 
       <div className="flex flex-col items-center justify-center md:items-start gap-10 mt-20 md:flex-row">

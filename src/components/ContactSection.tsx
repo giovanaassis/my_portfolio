@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function ContactSection() {
   return (
-    <section>
+    <section id="contato">
       <h1 className="highlightTitle mx-auto">Vamos bater um papo?</h1>
 
       <div className="flex flex-col items-center justify-center gap-15 mt-20 lg:flex-row">
