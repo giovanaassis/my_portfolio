@@ -36,9 +36,25 @@ function ContactSection() {
         <div className="w-[1px] h-120 bg-primary-purple hidden lg:block"></div>
 
         {/* CONTACT FORM */}
-        <form className="flex flex-col gap-5 w-full lg:w-[350px] items-center">
-          <input type="text" name="name" id="name" placeholder="Nome" className="inputs"/>
-          <input type="email" name="email" id="email" placeholder="E-mail" className="inputs"/>
+        <form
+          action="https://formsubmit.co/ec9031f0ff9ceea364825579d87b7a0e"
+          method="post"
+          className="flex flex-col gap-5 w-full lg:w-[350px] items-center"
+        >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nome"
+            className="inputs"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+            className="inputs"
+          />
 
           <textarea
             name="message"
@@ -48,7 +64,17 @@ function ContactSection() {
             className="inputs"
           ></textarea>
 
-          <button className="primaryButton w-full lg:w-[50%] lg:self-start">enviar</button>
+          <button
+            type="submit"
+            className="primaryButton w-full lg:w-[50%] lg:self-start"
+          >
+            enviar
+          </button>
+          <input
+            type="hidden"
+            name="_next"
+            value="http://localhost:5173/"
+          ></input>
         </form>
       </div>
     </section>
