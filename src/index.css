@@ -11,6 +11,7 @@
   --color-light-purple: #c588ff;
   --color-dark-purple: #11001c;
   --color-background: #e5d8ec;
+  --color-word: #11001c;
   --color-highlight: linear-gradient(90deg, #3c096c 0%, #7512d2 100%);
 
   --font-mont: "Montserrat", sans-serif;
@@ -23,6 +24,12 @@
       transform: translateX(calc(-100% - 32px));
     }
   }
+}
+
+.dark {
+  --color-background: var(--color-dark-purple);
+  --color-highlight: var(--color-secondary-purple);
+  --color-word: white;
 }
 
 @layer base {
@@ -57,7 +64,7 @@
   }
 
   h3 {
-    color: var(--color-secondary-purple);
+    @apply text-secondary-purple dark:text-light-purple;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -77,8 +84,7 @@
     right: 0;
     z-index: 1;
     min-height: 100vh;
-    background-color: var(--color-light-purple);
-    color: var(--color-secondary-purple);
+    @apply bg-light-purple text-secondary-purple dark:bg-secondary-purple dark:text-white;
     padding-top: 10rem;
     width: 50%;
     display: flex;
@@ -116,7 +122,7 @@
   }
 
   .highlightText {
-    color: var(--color-primary-purple);
+    @apply text-primary-purple dark:text-light-purple;
     font-weight: 600;
     font-style: italic;
   }
@@ -136,14 +142,14 @@
   }
 
   .secondaryButton {
-    background-color: var(--color-dark-purple);
+    @apply bg-dark-purple dark:bg-secondary-purple;
     color: white;
     border-radius: 10px;
     font-weight: 500;
   }
 
   .techStacks {
-    color: var(--color-primary-purple);
+    @apply text-primary-purple dark:text-word;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,6 +174,7 @@
   }
 
   .inputs {
+    color: var(--color-dark-purple);
     border: 2px solid lightgray;
     outline: 0;
     background-color: white;

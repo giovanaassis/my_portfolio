@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <HeroSection />
       </header>
-      <main className="flex flex-col items-center justify-center gap-50 my-20 w-[70%] mx-auto">
+      <main className="flex flex-col items-center justify-center gap-50 my-20 w-[70%] mx-auto text-word">
         <AboutMeSection />
         <ProjectsSection />
         <TechStackSection />

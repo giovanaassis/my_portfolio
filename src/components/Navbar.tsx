@@ -1,9 +1,10 @@
 import Brasil from "@/assets/brasil.png";
 import UK from "@/assets/united-kingdom.png";
-import { MoonIcon, MenuIcon, XIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import DarkModeButton from "./DarkModeButton";
 
 function Navbar() {
   const navItems: string[] = [
@@ -27,7 +28,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`flex w-full items-center justify-between px-15 py-7 fixed top-0 z-50 bg-background ${
+      className={`flex w-full items-center justify-between px-15 py-7 fixed top-0 z-50 bg-background text-word ${
         isScrolled ? "shadow-md" : ""
       }`}
     >
@@ -41,20 +42,18 @@ function Navbar() {
       <DesktopMenu navItems={navItems} />
 
       {/* DARK MODE BUTTON */}
-      <button>
-        <MoonIcon />
-      </button>
+      <DarkModeButton />
 
       {/* MENUBAR FOR MOBILE */}
       {openMenu ? (
         <XIcon
-          className="text-secondary-purple cursor-pointer lg:hidden z-2"
+          className="text-word cursor-pointer lg:hidden z-2"
           size={40}
           onClick={() => setOpenMenu(!openMenu)}
         />
       ) : (
         <MenuIcon
-          className="text-secondary-purple cursor-pointer lg:hidden"
+          className="text-word cursor-pointer lg:hidden"
           size={40}
           onClick={() => setOpenMenu(!openMenu)}
         />

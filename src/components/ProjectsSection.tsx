@@ -28,9 +28,9 @@ function ProjectsSection() {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="w-10 h-10 bg-primary-purple text-white hover:bg-secondary-purple" />
+        <CarouselPrevious className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple" />
 
-        <CarouselNext className="w-10 h-10 bg-primary-purple text-white hover:bg-secondary-purple" />
+        <CarouselNext className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple" />
       </Carousel>
     </section>
   );

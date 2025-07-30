@@ -48,7 +48,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
   const techComponents = techs.map((tech) => getTechIcons(tech));
 
   return (
-    <div className="flex flex-col gap-10 text-dark-purple items-center justify-center p-4 bg-white rounded-xl lg:flex-row">
+    <div className="flex flex-col gap-10 text-word items-center justify-center p-4 bg-white rounded-xl lg:flex-row dark:bg-dark-purple">
       <div className="lg:h-[400px] lg:w-[50%] self-start">
         <img
           src={image}
@@ -65,7 +65,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
         <p className="tracking-widest">{description}</p>
 
         {/* PROJECT TECH */}
-        <div className="flex gap-5 text-4xl text-secondary-purple">
+        <div className="flex gap-5 text-4xl text-secondary-purple dark:text-light-purple">
           {techComponents.map((tech) => tech)}
         </div>
 
