@@ -10,7 +10,7 @@ import { projects } from "@/data/projects";
 
 function ProjectsSection() {
   return (
-    <section id="projetos">
+    <section id="projetos" className="scroll-mt-30">
       <h1 className="highlightTitle mx-auto">Projetos para chamar de meu</h1>
 
       <Carousel

@@ -7,7 +7,7 @@ function MobileMenu({ navItems, openMenu }: MobileMenuProps) {
   return (
     <ul className={`navbarMobile lg:hidden ${openMenu ? "activeMenu" : ""}`}>
       {navItems.map((item, index) => (
-        <a href={`#${item}`}>
+        <a href={`#${item === "home" ? "" : item}`}>
           <li key={index}>{item}</li>
         </a>
       ))}

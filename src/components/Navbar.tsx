@@ -1,7 +1,7 @@
 import Brasil from "@/assets/brasil.png";
 import UK from "@/assets/united-kingdom.png";
 import { MoonIcon, MenuIcon, XIcon } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 
@@ -14,9 +14,23 @@ function Navbar() {
     "contato",
   ];
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    // TO ADD THE SHADOW WHEN SCROLL
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="flex w-full items-center justify-between px-15 py-7 fixed top-0 z-50 bg-background shadow-md">
+    <nav
+      className={`flex w-full items-center justify-between px-15 py-7 fixed top-0 z-50 bg-background ${
+        isScrolled ? "shadow-md" : ""
+      }`}
+    >
       {/* COUNTRY FLAGS */}
       <div className="flex gap-5">
         <img src={Brasil} alt="brazil-flag" width={40} />

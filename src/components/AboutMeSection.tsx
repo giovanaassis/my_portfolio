@@ -2,7 +2,7 @@ import ProfileImage from "@/assets/profile-image.jpg";
 
 function AboutMeSection() {
   return (
-    <section id="sobre mim">
+    <section id="sobre mim" className="scroll-mt-30">
       <h1 className="highlightTitle mx-auto">Quem sou eu?</h1>
 
       <div className="flex flex-col md:flex-row gap-10 items-center justify-center mt-20 text-center leading-9">
