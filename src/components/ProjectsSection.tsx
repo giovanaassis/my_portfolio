@@ -18,14 +18,11 @@ function ProjectsSection() {
         opts={{ loop: true }}
       >
         <CarouselContent>
-          {/* <CarouselItem>
-            <ProjectCard />
-          </CarouselItem> */}
-          {projects.map((project) => (
-            <CarouselItem key={project.id}>
-              <ProjectCard project={project} />
-            </CarouselItem>
-          ))}
+            {projects.map((project) => (
+              <CarouselItem key={project.id}>
+                <ProjectCard project={project} />
+              </CarouselItem>
+            ))}
         </CarouselContent>
 
         <CarouselPrevious className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple" />

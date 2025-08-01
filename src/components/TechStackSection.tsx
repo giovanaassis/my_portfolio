@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 function TechStackSection() {
   const frontendStack: string[] = [
     "html",
@@ -20,36 +22,51 @@ function TechStackSection() {
       <h1 className="highlightTitle mx-auto">Tecnologias que uso</h1>
 
       <div className="flex flex-col items-center justify-center md:items-start gap-10 mt-20 md:flex-row">
-        <div>
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ amount: 0.5 }}
+        >
           <h3 className="md:text-4xl">frontend</h3>
           <div className="techStacks">
             {frontendStack.map((stack) => (
               <span>{stack}</span>
             ))}
           </div>
-        </div>
+        </motion.div>
         {/* STYLED LINE */}
         <div className="w-50 bg-primary-purple h-2 md:w-2 md:h-100"></div>
 
-        <div>
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ amount: 0.5 }}
+        >
           <h3 className="md:text-4xl">backend</h3>
           <div className="techStacks">
             {backendStack.map((stack) => (
               <span>{stack}</span>
             ))}
           </div>
-        </div>
+        </motion.div>
         {/* STYLED LINE */}
         <div className="w-50 bg-primary-purple h-2 md:w-2 md:h-100"></div>
 
-        <div>
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          viewport={{ amount: 0.5 }}
+        >
           <h3 className="md:text-4xl">outros</h3>
           <div className="techStacks">
             {othersStack.map((stack) => (
               <span>{stack}</span>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
