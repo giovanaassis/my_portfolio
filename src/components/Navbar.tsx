@@ -1,19 +1,14 @@
-import Brasil from "@/assets/brasil.png";
-import UK from "@/assets/united-kingdom.png";
 import { MenuIcon, XIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import DarkModeButton from "./DarkModeButton";
+import { useTranslation } from "react-i18next";
+import Flags from "./Flags";
 
 function Navbar() {
-  const navItems: string[] = [
-    "home",
-    "sobre mim",
-    "projetos",
-    "tecnologias",
-    "contato",
-  ];
+  const { t } = useTranslation("home");
+  const navItems = t("navItems", { returnObjects: true }) as string[];
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -33,10 +28,7 @@ function Navbar() {
       }`}
     >
       {/* COUNTRY FLAGS */}
-      <div className="flex gap-5">
-        <img src={Brasil} alt="brazil-flag" width={40} />
-        <img src={UK} alt="united-kingdom-flag" width={40} />
-      </div>
+      <Flags />
 
       {/* MENUBAR FOR BIG SCREENS */}
       <DesktopMenu navItems={navItems} />

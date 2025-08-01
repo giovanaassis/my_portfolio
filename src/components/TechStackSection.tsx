@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 function TechStackSection() {
   const frontendStack: string[] = [
@@ -17,8 +18,11 @@ function TechStackSection() {
   ];
   const othersStack: string[] = ["git", "github", "jest", "npm", "figma"];
 
+  const { t } = useTranslation("home");
+    const navItems = t("navItems", { returnObjects: true }) as string[];
+
   return (
-    <section id="tecnologias" className="scroll-mt-30">
+    <section id={navItems[3]} className="scroll-mt-30">
       <h1 className="highlightTitle mx-auto">Tecnologias que uso</h1>
 
       <div className="flex flex-col items-center justify-center md:items-start gap-10 mt-20 md:flex-row">

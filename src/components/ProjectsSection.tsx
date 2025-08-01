@@ -7,10 +7,14 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { projects } from "@/data/projects";
+import { useTranslation } from "react-i18next";
 
 function ProjectsSection() {
+  const { t } = useTranslation("home");
+  const navItems = t("navItems", { returnObjects: true }) as string[];
+
   return (
-    <section id="projetos" className="scroll-mt-30">
+    <section id={navItems[2]} className="scroll-mt-30">
       <h1 className="highlightTitle mx-auto">Projetos para chamar de meu</h1>
 
       <Carousel
@@ -18,11 +22,11 @@ function ProjectsSection() {
         opts={{ loop: true }}
       >
         <CarouselContent>
-            {projects.map((project) => (
-              <CarouselItem key={project.id}>
-                <ProjectCard project={project} />
-              </CarouselItem>
-            ))}
+          {projects.map((project) => (
+            <CarouselItem key={project.id}>
+              <ProjectCard project={project} />
+            </CarouselItem>
+          ))}
         </CarouselContent>
 
         <CarouselPrevious className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple" />

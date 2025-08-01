@@ -1,9 +1,14 @@
 import ProfileImage from "@/assets/profile-image.jpg";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 function AboutMeSection() {
+  const { t } = useTranslation("home");
+  const navItems = t("navItems", { returnObjects: true }) as string[];
+  
+
   return (
-    <section id="sobre mim" className="scroll-mt-30">
+    <section id={navItems[1]} className="scroll-mt-30">
       <h1 className="highlightTitle mx-auto">Quem sou eu?</h1>
 
       <div className="flex flex-col md:flex-row gap-10 items-center justify-center mt-20 text-center leading-9">

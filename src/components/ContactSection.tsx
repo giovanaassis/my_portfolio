@@ -1,10 +1,14 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function ContactSection() {
+  const { t } = useTranslation("home");
+  const navItems = t("navItems", { returnObjects: true }) as string[];
+
   return (
-    <section id="contato" className="scroll-mt-30">
+    <section id={navItems[4]} className="scroll-mt-30">
       <h1 className="highlightTitle mx-auto">Vamos bater um papo?</h1>
 
       <div className="flex flex-col items-center justify-center gap-15 mt-20 lg:flex-row">

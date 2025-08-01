@@ -1,0 +1,8 @@
+{
+    "navItems": ["home", "about me", "projects", "tech stack", "contact"],
+    "greetings": {
+    "first": "Hello, i'm",
+    "second": "Your",
+    "third": "Frontend Developer"
+  }
+}
