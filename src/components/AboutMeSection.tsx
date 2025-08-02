@@ -1,15 +1,17 @@
 import ProfileImage from "@/assets/profile-image.jpg";
 import { motion } from "motion/react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 function AboutMeSection() {
-  const { t } = useTranslation("home");
-  const navItems = t("navItems", { returnObjects: true }) as string[];
-  
+  const { t } = useTranslation("aboutMe");
+  const navItems = t("navItems", {
+    returnObjects: true,
+    ns: "home",
+  }) as string[];
 
   return (
     <section id={navItems[1]} className="scroll-mt-30">
-      <h1 className="highlightTitle mx-auto">Quem sou eu?</h1>
+      <h1 className="highlightTitle mx-auto">{t("title")}</h1>
 
       <div className="flex flex-col md:flex-row gap-10 items-center justify-center mt-20 text-center leading-9">
         <motion.div
@@ -34,32 +36,34 @@ function AboutMeSection() {
           viewport={{ amount: 0.5 }}
         >
           <p>
-            Me chamo Giovana, sou graduanda em{" "}
-            <span className="highlightText">
-              Análise e Desenvolvimento de Sistemas
-            </span>{" "}
-            e apaixonada por transformar idéias em interfaces funcionais.
+            <Trans
+              i18nKey="paragraph1"
+              ns="aboutMe"
+              components={{ 1: <span className="highlightText" /> }}
+            />
           </p>
 
           <p>
-            Desenvolvo projetos com{" "}
-            <span className="highlightText">
-              Typescript, React, TailwindCSS e Next.js.
-            </span>{" "}
-            Também gosto de me aventurar em backend, onde exploro tecnologias
-            como{" "}
-            <span className="highlightText">
-              Node.js, Express e PostgreSQL.
-            </span>
+            <Trans
+              i18nKey="paragraph2"
+              ns="aboutMe"
+              components={{
+                1: <span className="highlightText" />,
+                2: <span className="highlightText" />,
+              }}
+            />
           </p>
 
           <p>
-            Atualmente busco minha primeira vaga na área de tecnologia, como
-            <span className="highlightText"> Desenvolvedora JR / Estágio.</span>
+            <Trans
+              i18nKey="paragraph3"
+              ns="aboutMe"
+              components={{ 1: <span className="highlightText" /> }}
+            />
           </p>
 
           <a href="/cv-giovana-assis.pdf" download="cv-giovana-assis.pdf">
-            <button className="primaryButton">baixar currículo</button>
+            <button className="primaryButton">{t("downloadCV")}</button>
           </a>
         </motion.div>
       </div>
