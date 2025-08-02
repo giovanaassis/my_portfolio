@@ -5,11 +5,13 @@ import ptHome from "../public/locales/pt/home.json";
 import ptAbout from "../public/locales/pt/aboutMe.json";
 import ptProjects from "../public/locales/pt/projects.json";
 import ptTechs from "../public/locales/pt/techStack.json";
+import ptContact from "../public/locales/pt/contact.json";
 
 import enHome from "../public/locales/en/home.json";
 import enAbout from "../public/locales/en/aboutMe.json";
 import enProjects from "../public/locales/en/projects.json";
 import enTechs from "../public/locales/en/techStack.json";
+import enContact from "../public/locales/en/contact.json";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -18,12 +20,14 @@ i18n.use(initReactI18next).init({
       aboutMe: ptAbout,
       projects: ptProjects,
       techs: ptTechs,
+      contact: ptContact,
     },
     en: {
       home: enHome,
       aboutMe: enAbout,
       projects: enProjects,
       techs: enTechs,
+      contact: enContact,
     },
   },
   lng: "pt",

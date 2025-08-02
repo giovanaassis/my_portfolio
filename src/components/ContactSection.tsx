@@ -4,12 +4,15 @@ import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function ContactSection() {
-  const { t } = useTranslation("home");
-  const navItems = t("navItems", { returnObjects: true }) as string[];
+  const { t } = useTranslation("contact");
+  const navItems = t("navItems", {
+    returnObjects: true,
+    ns: "home",
+  }) as string[];
 
   return (
     <section id={navItems[4]} className="scroll-mt-30">
-      <h1 className="highlightTitle mx-auto">Vamos bater um papo?</h1>
+      <h1 className="highlightTitle mx-auto">{t("title")}</h1>
 
       <div className="flex flex-col items-center justify-center gap-15 mt-20 lg:flex-row">
         {/* MY SOCIALS */}
@@ -26,7 +29,7 @@ function ContactSection() {
               className="flex items-center justify-between gap-5"
             >
               <FaLinkedin />
-              <span>Meu Linkedin</span>
+              <span>{t("linkedin")}</span>
               <ArrowUpRight />
             </a>
           </button>
@@ -37,7 +40,7 @@ function ContactSection() {
               className="flex items-center justify-between gap-5"
             >
               <FaGithub />
-              <span>Meu Github</span>
+              <span>{t("github")}</span>
               <ArrowUpRight />
             </a>
           </button>
@@ -60,7 +63,7 @@ function ContactSection() {
             type="text"
             name="name"
             id="name"
-            placeholder="Nome"
+            placeholder={t("form-name")}
             className="inputs"
           />
           <input
@@ -74,7 +77,7 @@ function ContactSection() {
           <textarea
             name="message"
             id="message"
-            placeholder="Sua mensagem aqui..."
+            placeholder={t("form-message")}
             rows={10}
             className="inputs"
           ></textarea>
@@ -83,7 +86,7 @@ function ContactSection() {
             type="submit"
             className="primaryButton w-full lg:w-[50%] lg:self-start"
           >
-            enviar
+            {t("submit-button")}
           </button>
           <input
             type="hidden"
