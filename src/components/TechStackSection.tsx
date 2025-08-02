@@ -18,12 +18,15 @@ function TechStackSection() {
   ];
   const othersStack: string[] = ["git", "github", "jest", "npm", "figma"];
 
-  const { t } = useTranslation("home");
-    const navItems = t("navItems", { returnObjects: true }) as string[];
+  const { t } = useTranslation("techs");
+  const navItems = t("navItems", {
+    returnObjects: true,
+    ns: "home",
+  }) as string[];
 
   return (
     <section id={navItems[3]} className="scroll-mt-30">
-      <h1 className="highlightTitle mx-auto">Tecnologias que uso</h1>
+      <h1 className="highlightTitle mx-auto">{t("title")}</h1>
 
       <div className="flex flex-col items-center justify-center md:items-start gap-10 mt-20 md:flex-row">
         <motion.div
@@ -64,7 +67,7 @@ function TechStackSection() {
           transition={{ duration: 0.5, delay: 1 }}
           viewport={{ amount: 0.5 }}
         >
-          <h3 className="md:text-4xl">outros</h3>
+          <h3 className="md:text-4xl">{t("other")}</h3>
           <div className="techStacks">
             {othersStack.map((stack) => (
               <span>{stack}</span>
