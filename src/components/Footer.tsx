@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+  const { t } = useTranslation("footer");
+
   return (
     <footer className="bg-secondary-purple text-white text-center text-lg p-5 font-medium select-none">
-      <span>Feito com 💜 por Giovana de Assis © 2025</span>
+      <span>{t("footer-text")}</span>
     </footer>
   );
 }
