@@ -10,12 +10,15 @@ import { projects } from "@/data/projects";
 import { useTranslation } from "react-i18next";
 
 function ProjectsSection() {
-  const { t } = useTranslation("home");
-  const navItems = t("navItems", { returnObjects: true }) as string[];
+  const { t } = useTranslation("projects");
+  const navItems = t("navItems", {
+    returnObjects: true,
+    ns: "home",
+  }) as string[];
 
   return (
     <section id={navItems[2]} className="scroll-mt-30">
-      <h1 className="highlightTitle mx-auto">Projetos para chamar de meu</h1>
+      <h1 className="highlightTitle mx-auto">{t("title")}</h1>
 
       <Carousel
         className="mt-20 w-full max-w-xs md:max-w-lg lg:max-w-4xl mx-auto"

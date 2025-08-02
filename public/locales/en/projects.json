@@ -1,0 +1,20 @@
+{
+  "title": "Projects to call my own.",
+  "project1": {
+    "description": "Interactive game that helps train musical ear. The user listens to a note and tries to guess which one it is — ideal for students and musicians who want to improve their auditory perception."
+  },
+  "project2": {
+    "description": "Full application that simulates an electronics store. Allows users to add, edit, delete, and view products."
+  },
+  "project3": {
+    "description": "Responsive landing page for a fictional gym, with a modern design and conversion-focused layout."
+  },
+  "project4": {
+    "description": "Academic project with a socio-environmental focus. A prototype where users can donate or receive fresh food like fruits and vegetables. Users register to participate in the solidarity network."
+  },
+  "project5": {
+    "description": "Platform inspired by Y Combinator, where users can share and discover startups and connect with other entrepreneurs."
+  },
+  "repo-button": "source code",
+  "link-button": "project link"
+}

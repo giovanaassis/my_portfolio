@@ -1,0 +1,20 @@
+{
+  "title": "Projetos para chamar de meu.",
+  "project1": {
+    "description": "Jogo interativo que ajuda a treinar o ouvido musical. O usuário ouve uma nota e tenta adivinhar qual é — ideal ara estudantes e músicos que desejam aprimorar sua percepção auditiva."
+  },
+  "project2": {
+    "description": "Aplicação completa que simula uma loja de eletrônicos. Permite cadastrar, editar, excluir e visualizar produtos."
+  },
+  "project3": {
+    "description": "Landing page responsiva para uma academia fictícia, com design moderno e foco em conversão."
+  },
+  "project4": {
+    "description": "Projeto acadêmico com foco socioambiental. Protótipo onde é possível doar ou receber alimentos frescos como frutas e verduras. Usuários se cadastram para participar da rede solidária."
+  },
+  "project5": {
+    "description": "Plataforma inspirada no Y Combinator, onde usuários podem compartilhar e descobrir startups e se conectar com outros empreendedores."
+  },
+  "repo-button": "código do projeto",
+  "link-button": "link do projeto"
+}

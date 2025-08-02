@@ -7,6 +7,7 @@ import {
 } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 import type { ProjectType } from "@/@types/project";
+import { useTranslation } from "react-i18next";
 
 const getTechIcons = (tech: string) => {
   switch (tech) {
@@ -43,14 +44,13 @@ const getTechIcons = (tech: string) => {
 };
 
 function ProjectCard({ project }: { project: ProjectType }) {
-  const { title, description, image, techs, repo, link } = project;
+  const { title, descriptionKey, image, techs, repo, link } = project;
+  const { t } = useTranslation("projects");
 
   const techComponents = techs.map((tech) => getTechIcons(tech));
 
   return (
-    <div
-      className="flex flex-col gap-10 text-word items-center justify-center p-4 bg-white rounded-xl lg:flex-row dark:bg-dark-purple"
-    >
+    <div className="flex flex-col gap-10 text-word items-center justify-center p-4 bg-white rounded-xl lg:flex-row dark:bg-dark-purple">
       <div className="lg:h-[400px] lg:w-[50%] self-start">
         <img
           src={image}
@@ -64,7 +64,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
         <h2 className="text-4xl font-semibold">{title}</h2>
 
         {/* PROJECT DESCRIPTION */}
-        <p className="tracking-widest">{description}</p>
+        <p className="tracking-widest">{t(descriptionKey)}</p>
 
         {/* PROJECT TECH */}
         <div className="flex gap-5 text-4xl text-secondary-purple dark:text-light-purple">
@@ -80,7 +80,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
             className="w-[50%] h-[70px] transition-transform duration-200 md:hover:scale-105"
           >
             <button className="secondaryButton h-full">
-              código do projeto
+              {t("repo-button")}
             </button>
           </a>
           <a
@@ -89,7 +89,9 @@ function ProjectCard({ project }: { project: ProjectType }) {
             rel="noopener noreferrer"
             className="w-[50%] h-[70px] transition-transform duration-200 md:hover:scale-105"
           >
-            <button className="secondaryButton h-full">link do projeto</button>
+            <button className="secondaryButton h-full">
+              {t("link-button")}
+            </button>
           </a>
         </div>
       </div>

@@ -1,7 +1,7 @@
 export type ProjectType = {
     id: number;
     title: string;
-    description: string;
+    descriptionKey: string;
     image: string;
     techs: string[];
     repo: string;
