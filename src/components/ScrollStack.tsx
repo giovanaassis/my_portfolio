@@ -18,7 +18,7 @@ function ScrollStack() {
   ];
 
   return (
-    <article className="bg-secondary-purple text-white text-4xl py-1 flex gap-8">
+    <article className="bg-secondary-purple text-white text-4xl py-1 flex gap-8 overflow-hidden w-full">
       <ul className="iconsContainer">
         {icons.map((icon) => (
           <li className="cursor-default">{icon}</li>
