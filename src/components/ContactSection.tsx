@@ -91,7 +91,7 @@ function ContactSection() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:5173/"
+            value="https://my-portfolio-tau-ten-79.vercel.app/"
           ></input>
         </motion.form>
       </div>
