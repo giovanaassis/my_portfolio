@@ -1,5 +1,6 @@
 {
   "title": "Projects to call my own.",
+  "slide": "Slide to the right",
   "project1": {
     "description": "Interactive game that helps train musical ear. The user listens to a note and tries to guess which one it is — ideal for students and musicians who want to improve their auditory perception."
   },

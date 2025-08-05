@@ -20,6 +20,7 @@ function ProjectsSection() {
     <section id={navItems[2]} className="scroll-mt-30">
       <h1 className="highlightTitle mx-auto">{t("title")}</h1>
 
+      <span className="flex justify-center pt-10 text-xl opacity-80 md:hidden">{t("slide")} {"->"}</span>
       <Carousel
         className="mt-20 w-full max-w-xs md:max-w-lg lg:max-w-4xl mx-auto"
         opts={{ loop: true }}
@@ -32,9 +33,9 @@ function ProjectsSection() {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple" />
+        <CarouselPrevious className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple hidden md:block" />
 
-        <CarouselNext className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple" />
+        <CarouselNext className="w-10 h-10 border-0 bg-primary-purple text-white hover:bg-secondary-purple hidden md:block" />
       </Carousel>
     </section>
   );

@@ -1,5 +1,6 @@
 {
   "title": "Projetos para chamar de meu.",
+  "slide": "Deslize para o lado",
   "project1": {
     "description": "Jogo interativo que ajuda a treinar o ouvido musical. O usuário ouve uma nota e tenta adivinhar qual é — ideal ara estudantes e músicos que desejam aprimorar sua percepção auditiva."
   },
