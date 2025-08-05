@@ -65,6 +65,7 @@ function ContactSection() {
             id="name"
             placeholder={t("form-name")}
             className="inputs"
+            required
           />
           <input
             type="email"
@@ -72,6 +73,7 @@ function ContactSection() {
             id="email"
             placeholder="E-mail"
             className="inputs"
+            required
           />
 
           <textarea
@@ -80,6 +82,7 @@ function ContactSection() {
             placeholder={t("form-message")}
             rows={10}
             className="inputs"
+            required
           ></textarea>
 
           <button
