@@ -40,7 +40,7 @@ function DesktopMenu({ navItems }: { navItems: string[] }) {
   return (
     <ul className="relative h-[50px] px-5 border-2 border-primary-purple rounded-full lg:flex items-center justify-center gap-5 hidden">
       {navItems.map((item, index) => (
-        <a href={`#${item === "home" ? "" : item}`}>
+        <a href={`#${item === "home" ? "" : item}`} key={index}>
           <li
             key={index}
             onClick={() => handleClick(item)}

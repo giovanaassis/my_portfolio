@@ -47,7 +47,9 @@ function ProjectCard({ project }: { project: ProjectType }) {
   const { title, descriptionKey, image, techs, repo, link } = project;
   const { t } = useTranslation("projects");
 
-  const techComponents = techs.map((tech) => getTechIcons(tech));
+  const techComponents = techs.map((tech) => (
+    <span key={tech}>{getTechIcons(tech)}</span>
+  ));
 
   return (
     <div className="flex flex-col gap-10 text-word items-center justify-center p-4 bg-white rounded-xl lg:flex-row dark:bg-dark-purple">

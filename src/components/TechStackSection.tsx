@@ -38,7 +38,7 @@ function TechStackSection() {
           <h3 className="md:text-4xl">frontend</h3>
           <div className="techStacks">
             {frontendStack.map((stack) => (
-              <span>{stack}</span>
+              <span key={stack}>{stack}</span>
             ))}
           </div>
         </motion.div>
@@ -54,7 +54,7 @@ function TechStackSection() {
           <h3 className="md:text-4xl">backend</h3>
           <div className="techStacks">
             {backendStack.map((stack) => (
-              <span>{stack}</span>
+              <span key={stack}>{stack}</span>
             ))}
           </div>
         </motion.div>
@@ -70,7 +70,7 @@ function TechStackSection() {
           <h3 className="md:text-4xl">{t("other")}</h3>
           <div className="techStacks">
             {othersStack.map((stack) => (
-              <span>{stack}</span>
+              <span key={stack}>{stack}</span>
             ))}
           </div>
         </motion.div>
