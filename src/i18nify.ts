@@ -1,19 +1,19 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import ptHome from "../public/locales/pt/home.json";
-import ptAbout from "../public/locales/pt/aboutMe.json";
-import ptProjects from "../public/locales/pt/projects.json";
-import ptTechs from "../public/locales/pt/techStack.json";
-import ptContact from "../public/locales/pt/contact.json";
-import ptFooter from "../public/locales/pt/footer.json";
+import ptHome from "@/locales/pt/home.json";
+import ptAbout from "@/locales/pt/aboutMe.json";
+import ptProjects from "@/locales/pt/projects.json";
+import ptTechs from "@/locales/pt/techStack.json";
+import ptContact from "@/locales/pt/contact.json";
+import ptFooter from "@/locales/pt/footer.json";
 
-import enHome from "../public/locales/en/home.json";
-import enAbout from "../public/locales/en/aboutMe.json";
-import enProjects from "../public/locales/en/projects.json";
-import enTechs from "../public/locales/en/techStack.json";
-import enContact from "../public/locales/en/contact.json";
-import enFooter from "../public/locales/en/footer.json";
+import enHome from "@/locales/en/home.json";
+import enAbout from "@/locales/en/aboutMe.json";
+import enProjects from "@/locales/en/projects.json";
+import enTechs from "@/locales/en/techStack.json";
+import enContact from "@/locales/en/contact.json";
+import enFooter from "@/locales/en/footer.json";
 
 i18n.use(initReactI18next).init({
   resources: {

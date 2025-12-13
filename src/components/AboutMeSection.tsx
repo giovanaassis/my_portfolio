@@ -50,6 +50,7 @@ function AboutMeSection() {
               components={{
                 1: <span className="highlightText" />,
                 2: <span className="highlightText" />,
+                3: <p />,
               }}
             />
           </p>
