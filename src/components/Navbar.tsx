@@ -24,7 +24,9 @@ function Navbar() {
   return (
     <nav
       className={`flex w-full items-center justify-between px-15 py-7 fixed top-0 z-50 bg-background text-word ${
-        isScrolled ? "shadow-md" : ""
+        isScrolled
+          ? "bg-background/90 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
       {/* COUNTRY FLAGS */}

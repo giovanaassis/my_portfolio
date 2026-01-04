@@ -5,11 +5,13 @@ import ProjectsSection from "./components/ProjectsSection";
 import TechStackSection from "./components/TechStackSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
   return (
     <>
-      <header>
+      <header className="w-full min-h-[600px] relative overflow-hidden">
+        <ParticlesBackground />
         <Navbar />
         <HeroSection />
       </header>
