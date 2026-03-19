@@ -29,11 +29,14 @@ function Navbar() {
           : "bg-transparent"
       }`}
     >
-      {/* COUNTRY FLAGS */}
-      <Flags />
+      <span className="font-bak text-primary-purple text-2xl select-none">
+        &lt;GioAssis /&gt;
+      </span>
 
       {/* MENUBAR FOR BIG SCREENS */}
       <DesktopMenu navItems={navItems} />
+
+      <MobileMenu navItems={navItems} openMenu={openMenu} />
 
       {/* DARK MODE BUTTON */}
       <DarkModeButton />
@@ -52,8 +55,6 @@ function Navbar() {
           onClick={() => setOpenMenu(!openMenu)}
         />
       )}
-
-      <MobileMenu navItems={navItems} openMenu={openMenu} />
     </nav>
   );
 }
