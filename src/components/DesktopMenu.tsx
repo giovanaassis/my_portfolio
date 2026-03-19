@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+ 
 function DesktopMenu({ navItems }: { navItems: string[] }) {
   const [activeItem, setActiveItem] = useState<string>("home");
   const [manualScroll, setManualScroll] = useState<boolean>(false);
@@ -38,7 +38,7 @@ function DesktopMenu({ navItems }: { navItems: string[] }) {
   }, [navItems, manualScroll]);
 
   return (
-    <ul className="relative h-[50px] px-5 border-2 border-primary-purple rounded-full lg:flex items-center justify-center gap-5 hidden">
+    <ul className="relative h-[50px] px-5 lg:flex items-center justify-center gap-5 hidden">
       {navItems.map((item, index) => (
         <a href={`#${item === "home" ? "" : item}`} key={index}>
           <li
