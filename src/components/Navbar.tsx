@@ -33,6 +33,7 @@ function Navbar() {
       {/* MENUBAR FOR BIG SCREENS */}
       <DesktopMenu navItems={navItems} />
 
+      {/* TODO -> CHANGED MOBILE MENU */}
       <MobileMenu navItems={navItems} openMenu={openMenu} />
 
       {/* DARK MODE BUTTON */}

@@ -137,7 +137,7 @@
   }
 
   .iconsCircle {
-    @apply border-2 rounded-full border-secondary-purple text-secondary-purple my-10 p-2 w-fit dark:text-primary-purple;
+    @apply border-2 rounded-full border-secondary-purple text-secondary-purple my-10 p-2 w-fit transition-all duration-350 dark:text-primary-purple lg:hover:bg-secondary-purple lg:hover:text-white lg:hover:translate-x-2 lg:hover:-translate-y-2 dark:hover:text-white;
   }
 
   .iconsContainer {
