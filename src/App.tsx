@@ -11,6 +11,7 @@ function App() {
   return (
     <>
       <header className="w-full min-h-[600px] relative overflow-hidden">
+        {/* TODO -> DELETE FLAGS AND SCROLLSTACK COMPONENTS */}
         <ParticlesBackground />
         <Navbar />
         <HeroSection />

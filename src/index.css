@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -11,7 +11,7 @@
   --color-secondary-purple: #3c096c;
   --color-light-purple: #c588ff;
   --color-dark-purple: #11001c;
-  --color-background: #e5d8ec;
+  --color-background: #e9e9e9;
   --color-word: #11001c;
   --color-highlight: linear-gradient(90deg, #3c096c 0%, #7512d2 100%);
 
@@ -20,10 +20,21 @@
   --font-bak: "Bakbak One", sans-serif;
 
   --animate-scroll: scroll 5s linear infinite;
+  --animate-bounce: bounce 1.5s infinite;
 
   @keyframes scroll {
     to {
       transform: translateX(calc(-100% - 32px));
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-10%);
+    }
+    50% {
+      transform: translateY(0);
     }
   }
 }
@@ -51,6 +62,7 @@
     text-transform: uppercase;
     font-size: 1rem;
     padding: 10px;
+    font-family: var(--font-poppins);
   }
 
   li {
@@ -64,6 +76,16 @@
 
   p {
     margin-bottom: 2rem;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl my-5;
+    font-family: var(--font-bak);
+  }
+
+  h2 {
+    @apply text-2xl md:text-4xl;
+    font-weight: 500;
   }
 
   h3 {
@@ -112,6 +134,10 @@
     letter-spacing: 2px;
     font-family: var(--font-bak);
     width: fit-content;
+  }
+
+  .iconsCircle {
+    @apply border-2 rounded-full border-secondary-purple text-secondary-purple my-10 p-2 w-fit dark:text-primary-purple;
   }
 
   .iconsContainer {
