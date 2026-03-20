@@ -5,7 +5,6 @@ import MobileMenu from "./MobileMenu";
 import DarkModeButton from "./DarkModeButton";
 
 function Navbar() {
-  // const navItems = t("navItems", { returnObjects: true }) as string[];
   const navItems = ["home", "sobre mim", "projetos", "tecnologias", "contato"];
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -21,7 +20,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`flex w-full items-center justify-between px-15 py-7 fixed top-0 z-50 bg-background text-primary-purple ${
+      className={`flex w-full items-center justify-around py-7 fixed top-0 z-50 bg-background text-primary-purple ${
         isScrolled
           ? "bg-background/90 backdrop-blur-md shadow-md"
           : "bg-transparent"

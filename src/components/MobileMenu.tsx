@@ -11,6 +11,7 @@ function MobileMenu({ navItems, openMenu }: MobileMenuProps) {
           <li key={index}>{item}</li>
         </a>
       ))}
+      <p className="font-extralight mt-15">👩‍💻 @giovanaassis</p>
     </ul>
   );
 }
