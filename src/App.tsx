@@ -10,9 +10,9 @@ import ParticlesBackground from "./components/ParticlesBackground";
 function App() {
   return (
     <>
+      <ParticlesBackground />
       <header className="w-full min-h-[600px] relative overflow-hidden">
         {/* TODO -> DELETE FLAGS AND SCROLLSTACK COMPONENTS */}
-        <ParticlesBackground />
         <Navbar />
         <HeroSection />
       </header>
