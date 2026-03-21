@@ -45,7 +45,7 @@ function DesktopMenu({ navItems }: { navItems: string[] }) {
             key={index}
             onClick={() => handleClick(item)}
             className={`transition-all duration-300 ${
-              activeItem === item ? "activeNavItem" : ""
+              activeItem === item ? "activeNavItem" : "hover:bg-[#7512d241]"
             }`}
           >
             {item}
