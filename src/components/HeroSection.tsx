@@ -53,7 +53,7 @@ function HeroSection() {
           <img
             src={Programmer}
             alt="draw of a programmer"
-            className="animate-bounce w-30 lg:-mt-20 md:w-60"
+            className="animate-bounce w-30 lg:-mt-20 md:w-60 shadow-lg shadow-primary-purple rounded-full"
           />
         </div>
       </motion.section>
