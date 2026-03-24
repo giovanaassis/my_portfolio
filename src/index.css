@@ -12,6 +12,7 @@
   /* TODO -> REPLACE THE LIGHT PURPLE */
   /* --color-light-purple: #c588ff; */
   --color-light-purple: #9747ff;
+  --color-lilac: #c191ffc9;
   --color-dark-purple: #11001c;
   --color-background: #e9e9e9;
   --color-word: #11001c;
@@ -99,6 +100,10 @@
     font-weight: 500;
     @apply text-dark-purple dark:text-light-purple text-4xl;
   }
+
+  h4 {
+    @apply text-xl md:text-lg mt-10 text-left text-light-purple font-bold;
+  }
 }
 
 @layer components {
@@ -144,7 +149,7 @@
     font-family: var(--font-bak);
     letter-spacing: 2px;
     margin-bottom: 10px;
-    @apply text-3xl;
+    @apply text-3xl md:text-5xl;
   }
 
   .iconsCircle {
@@ -204,6 +209,10 @@
 
   .gradientButton:hover {
     background-position: right;
+  }
+
+  .smallCard {
+    @apply flex flex-col h-18 w-20 items-center justify-center bg-primary-purple dark:bg-lilac p-4 px-6 text-white rounded-xl text-xs my-4 gap-1;
   }
 
   .techStacks {

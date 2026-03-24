@@ -1,40 +1,84 @@
 import ProfileImage from "@/assets/profile-image.jpg";
 import { motion } from "motion/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { IoGameController } from "react-icons/io5";
+import { FaMusic } from "react-icons/fa";
+import { GiCoffeeCup } from "react-icons/gi";
+import BrazilFlag from "@/assets/brasil.png";
+import UKFlag from "@/assets/united-kingdom.png";
 
 function AboutMeSection() {
   return (
-    <section id="sobre mim" className="scroll-mt-30 text-center">
+    <section id="sobre mim" className="scroll-mt-30 text-center w-full">
       <h2 className="subtitle">
         Quem sou <span className="highlightText">eu?</span>
       </h2>
       <p>Um pouco da minha história</p>
 
-      <div className="flex flex-col md:flex-row gap-10 items-center justify-center mt-20 text-center leading-9">
-        <motion.div
-          // className="w-60 h-60 rounded-full overflow-hidden border-4 border-primary-purple shrink-0"
-          className="w-60 h-70 relative"
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ amount: 0.5, once: true }}
-        >
-          <div className="bg-secondary-purple w-full h-full absolute  z-0 rounded-lg" />
+      <div className="flex flex-col lg:flex-row gap-10 items-center justify-center mt-20 text-center">
+        <div className="flex flex-col items-center">
+          {/* PROFILE IMAGE */}
+          <motion.div
+            className="w-60 h-70 relative md:w-80 md:h-[400px] md:self-start "
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ amount: 0.5, once: true }}
+          >
+            {/* PURPLE BACKGROUND */}
+            <motion.div
+              initial={{ x: 0, y: 0 }}
+              whileInView={{ x: -15, y: 10 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-secondary-purple w-full h-full absolute z-0 rounded-lg"
+            />
+            <motion.img
+              initial={{ x: 0, y: 0 }}
+              whileInView={{ x: 10, y: -10 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.5 }}
+              src={ProfileImage}
+              alt="my-profile-image"
+              className="w-full h-full object-cover relative z-10 rounded-lg shadow-dark-purple shadow-sm"
+            />
+          </motion.div>
 
-          {/* JUST FOR MOBILE */}
-          <span className="absolute inline-flex opaci-75 -right-1 h-4 w-4 rounded-full bg-green-500 -top-2 z-15 animate-ping lg:hidden"></span>
-          <span className="absolute inline-flex opaci-75 -right-1 h-4 w-4 rounded-full bg-green-500 -top-2 z-15 lg:hidden"></span>
+          {/* INFO EXTRA */}
+          <div>
+            <h4>Interesses</h4>
+            <div className="flex gap-5">
+              <div className="smallCard">
+                <IoGameController size={30} />
+                <span>games</span>
+              </div>
+              <div className="smallCard">
+                <FaMusic size={30} />
+                <span>música</span>
+              </div>
+              <div className="smallCard">
+                <GiCoffeeCup size={30} />
+                <span>café</span>
+              </div>
+            </div>
 
-          <img
-            src={ProfileImage}
-            alt="my-profile-image"
-            className="w-full h-full object-cover relative z-10 rounded-lg shadow-dark-purple shadow-sm"
-          />
-        </motion.div>
+            <h4>Idiomas</h4>
+            <div className="flex gap-5">
+              <div className="smallCard">
+                <img src={BrazilFlag} alt="brazil flag" className="w-5" />
+                <span>português</span>
+              </div>
+              <div className="smallCard">
+                <img src={UKFlag} alt="united kingdom flag" className="w-5" />
+                <span>inglês</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* ABOUT ME TEXT */}
         <motion.div
-          className="w-full sm:w-[400px] md:w-[500px] md:text-left flex flex-col items-center "
+          className="w-full sm:w-[400px] lg:text-left flex flex-col items-center text-sm md:w-[500px] lg:items-start leading-7"
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -42,32 +86,49 @@ function AboutMeSection() {
         >
           {/* STYLED LINE */}
           <span className="h-1 w-30 bg-primary-purple my-10"></span>
+
           <h3 className="font-bak text-secondary-purple dark:text-primary-purple">
             Giovana de Assis
           </h3>
           <div className="flex items-center gap-3 text-light-purple mb-10 text-lg">
             <FaMapMarkerAlt />
-            <h4>Brasil, Rio de Janeiro</h4>
+            <span>Brasil, Rio de Janeiro</span>
           </div>
 
           <motion.p
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: .8 }}
+            transition={{ duration: 0.8 }}
             viewport={{ amount: 0.5, once: true }}
           >
-            Me chamo Giovana e estou me formando em{" "}
+            Me chamo Giovana, estou me formando em{" "}
             <span className="highlightText">
-              Análise e Desenvolvimento de Sistemas
-            </span>
-            . Sou apaixonada por música, idiomas, games — e, claro, por
-            tecnologia.
+              Análise e Desenvolvimento de Sistemas,
+            </span>{" "}
+            e sou apaixonada por tecnologia!
           </motion.p>
 
           <motion.p
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: .8 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ amount: 0.5, once: true }}
+          >
+            Iniciei minha tragetória na área de varejo e vendas, onde desenvolvi
+            habilidades importantes como{" "}
+            <span className="highlightText">
+              comunicação, trabalho em equipe e pensamento analítico
+            </span>{" "}
+            , atuando em ambientes dinâmicos e{" "}
+            <span className="highlightText">orientados por metas.</span> Hoje,
+            aplico essas competências no desenvolvimento de software, buscando
+            criar soluções digitais eficientes para problemas reais.
+          </motion.p>
+
+          <motion.p
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
             viewport={{ amount: 0.5, once: true }}
           >
             Atualmente, foco em Desenvolvimento Web, estudando e construindo
@@ -77,23 +138,6 @@ function AboutMeSection() {
             </span>{" "}
             Também tenho experiência na criação e consumo de apis, interfaces
             responsivas e validação de formulários.
-          </motion.p>
-
-          <motion.p
-            initial={{ y: -50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: .8 }}
-            viewport={{ amount: 0.5, once: true }}
-          >
-            Minha experiência na área de varejo e vendas me proporcionou
-            habilidades importantes como{" "}
-            <span className="highlightText">
-              comunicação, trabalho em equipe e pensamento analítico
-            </span>{" "}
-            em ambientes dinâmicos e{" "}
-            <span className="highlightText">orientados por metas.</span> Hoje,
-            aplico essas competências no desenvolvimento de software, buscando
-            criar soluções digitais eficientes para problemas reais.
           </motion.p>
 
           <motion.p
