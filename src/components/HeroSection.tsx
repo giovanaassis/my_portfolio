@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Programmer from "@/assets/programmer.svg";
+import Programmer from "@/assets/icons/programmer.svg";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 
