@@ -12,7 +12,7 @@
   /* TODO -> REPLACE THE LIGHT PURPLE */
   /* --color-light-purple: #c588ff; */
   --color-light-purple: #9747ff;
-  --color-lilac: #c191ffc9;
+  --color-lilac: #c191ff;
   --color-dark-purple: #11001c;
   --color-background: #e9e9e9;
   --color-word: #11001c;
@@ -213,6 +213,28 @@
 
   .smallCard {
     @apply flex flex-col h-18 w-20 items-center justify-center bg-primary-purple dark:bg-lilac p-4 px-6 text-white rounded-xl text-xs my-4 gap-1;
+  }
+
+  .projectTechs {
+    @apply font-medium text-primary-purple dark:text-lilac;
+  }
+
+  .projectTechs:not(:last-child)::after {
+    content: "\2022";
+    padding: 0 10px;
+  }
+
+  .projectCard {
+    @apply w-full h-full bg-lilac rounded-xl shadow-2xl shadow-dark-purple dark:shadow-primary-purple border-2 -mt-20 z-10 cursor-pointer hover:-translate-y-4 duration-150;
+  }
+
+  .projectCard:first-child {
+    margin-top: 0;
+  }
+
+  .selected {
+    z-index: 50;
+    margin-bottom: 90px;
   }
 
   .techStacks {

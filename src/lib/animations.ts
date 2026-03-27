@@ -32,3 +32,10 @@ export const fadeUp = {
   transition: { duration: 0.8 },
   viewport: { amount: 0.5, once: true },
 };
+
+export const fadeDown = {
+  initial: { y: 70 },
+  whileInView: { y: 0 },
+  transition: { duration: 0.4 },
+  viewport: { once: true },
+};

@@ -34,7 +34,7 @@ function AboutMeSection() {
   return (
     <section id="sobre mim" className="scroll-mt-30 text-center w-full">
       <h2 className="subtitle">
-        Quem sou <span className="highlightText">eu?</span>
+        Quem sou <HighlightText>eu?</HighlightText>
       </h2>
       <p>Um pouco da minha história</p>
 
