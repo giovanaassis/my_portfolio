@@ -31,7 +31,7 @@ function MobileProjectCard({ project }: { project: ProjectType }) {
           animate={{ scale: 1 }}
           className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
         >
-          <div className="bg-white text-dark-purple dark:bg-[#212529] dark:text-white w-90 h-[80%] overflow-y-scroll flex flex-col rounded-2xl">
+          <div className="bg-white text-dark-purple dark:bg-[#212529] dark:text-white w-[80%] max-h-[500px] overflow-y-scroll flex flex-col rounded-2xl">
             <img
               src={image}
               alt={`project ${title} image`}
