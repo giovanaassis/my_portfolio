@@ -224,18 +224,21 @@
     padding: 0 10px;
   }
 
-  .projectCard {
+  .mobileProjectCard {
     @apply w-full h-full bg-lilac rounded-xl shadow-2xl shadow-dark-purple dark:shadow-primary-purple border-2 -mt-20 z-10 cursor-pointer hover:-translate-y-4 duration-150;
   }
 
-  .projectCard:first-child {
+  .mobileProjectCard:first-child {
     margin-top: 0;
   }
 
-  .selected {
-    z-index: 50;
-    margin-bottom: 90px;
+  .desktopProjectCard {
+    @apply flex w-full max-w-[1700px] h-100 border-7 border-secondary-purple border-dashed rounded-2xl p-5 gap-10 items-center bg-background dark:border-primary-purple;
   }
+
+  /* .desktopProjectCard:nth-of-type(odd) {
+    flex-direction: row-reverse;
+  } */
 
   .techStacks {
     @apply text-primary-purple dark:text-word;

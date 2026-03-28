@@ -16,7 +16,7 @@ function MobileProjectCard({ project }: { project: ProjectType }) {
         {...fadeDown}
         transition={{ delay: id * 0.2, ease: "easeOut", duration: 0.4 }}
         viewport={{ amount: 0.1, once: true }}
-        className="projectCard"
+        className="mobileProjectCard lg:hidden"
         onClick={() => setIsOpenModal(true)}
       >
         <img
