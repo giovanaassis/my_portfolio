@@ -32,7 +32,7 @@ const myInterests = [
 
 function AboutMeSection() {
   return (
-    <section id="sobre mim" className="scroll-mt-30 text-center w-full">
+    <section id="sobre" className="scroll-mt-30 text-center w-full">
       <h2 className="subtitle">
         Quem sou <HighlightText>eu?</HighlightText>
       </h2>

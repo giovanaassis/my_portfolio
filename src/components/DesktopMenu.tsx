@@ -26,7 +26,7 @@ function DesktopMenu({ navItems }: { navItems: string[] }) {
     const observer = new IntersectionObserver(handleObserver, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 0.2,
     });
 
     navItems.forEach((item) => {

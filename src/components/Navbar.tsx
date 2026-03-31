@@ -5,7 +5,7 @@ import MobileMenu from "./MobileMenu";
 import DarkModeButton from "./DarkModeButton";
 
 function Navbar() {
-  const navItems = ["home", "sobre mim", "projetos", "tecnologias", "contato"];
+  const navItems = ["home", "sobre", "projetos", "tecnologias", "contato"];
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
