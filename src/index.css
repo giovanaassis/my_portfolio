@@ -118,7 +118,7 @@
     right: 0;
     z-index: 1;
     min-height: 100vh;
-    @apply bg-light-purple text-secondary-purple dark:bg-secondary-purple dark:text-white;
+    @apply bg-light-purple text-secondary-purple dark:bg-gradient-to-r from-[#3c096c] to-[#7512d2] dark:text-white;
     padding-top: 10rem;
     width: 50%;
     display: flex;
