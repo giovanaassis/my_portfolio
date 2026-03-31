@@ -1,17 +1,22 @@
 import type { ProjectType } from "@/@types/project";
+import { fadeFromLeft, fadeFromRight } from "@/lib/animations";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "motion/react";
 
 function DesktopProjectCard({ project, index }: { project: ProjectType, index: number }) {
   const { id, title, image, description, techs, link } = project;
+  const isEven = index % 2 !== 0; 
 
   return (
-    <div className="desktopProjectCard">
+    <motion.div
+    {...(isEven ? fadeFromRight : fadeFromLeft)}
+    className="desktopProjectCard">
       {/* PROJECT DETAILS */}
-      <div className={`w-[70%] flex flex-col gap-5 ${index % 2 !== 0 ? "items-end" : "text-start"}`}>
+      <div className={`w-[70%] flex flex-col gap-5 ${isEven ? "items-end" : "text-start"}`}>
         <span className="font-bak text-2xl mb-7">0{id}</span>
         <div className="flex flex-wrap">
           {techs.map((tech) => (
-            <span className="projectTechs">{tech}</span>
+            <span className="projectTechs" key={tech}>{tech}</span>
           ))}
         </div>
         <h2>{title}</h2>
@@ -38,7 +43,7 @@ function DesktopProjectCard({ project, index }: { project: ProjectType, index: n
           className={`w-full h-full ${(id === 1) && "object-left"} object-cover rounded-2xl`}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
