@@ -225,7 +225,7 @@
   }
 
   .mobileProjectCard {
-    @apply w-full h-full bg-lilac rounded-xl shadow-2xl shadow-dark-purple dark:shadow-primary-purple border-2 -mt-20 z-10 cursor-pointer hover:-translate-y-4 duration-150;
+    @apply w-full h-[200px] bg-lilac rounded-xl shadow-2xl shadow-dark-purple dark:shadow-primary-purple border-2 -mt-20 z-10 cursor-pointer hover:-translate-y-4 duration-150;
   }
 
   .mobileProjectCard:first-child {
@@ -233,12 +233,16 @@
   }
 
   .desktopProjectCard {
-    @apply flex w-full max-w-[1700px] h-100 border-7 border-secondary-purple border-dashed rounded-2xl p-5 gap-10 items-center bg-background dark:border-primary-purple;
+    @apply hidden lg:flex w-full max-w-[1700px] h-100 border-7 border-secondary-purple border-dashed rounded-2xl p-5 gap-10 items-center bg-background dark:border-primary-purple;
   }
 
-  /* .desktopProjectCard:nth-of-type(odd) {
+  .desktopProjectCard:nth-of-type(odd) {
     flex-direction: row-reverse;
-  } */
+  }
+
+  .desktopProjectCard:nth-child(odd) > div > a {
+    text-align: right;
+  }
 
   .techStacks {
     @apply text-primary-purple dark:text-word;

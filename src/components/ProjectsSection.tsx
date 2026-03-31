@@ -13,7 +13,7 @@ function ProjectsSection() {
 
       <div className="w-full flex flex-col items-center justify-center mt-20 lg:gap-10 lg:odd:text-right">
         {projects.map(project => <MobileProjectCard project={project} />)}
-        {projects.map(project => <DesktopProjectCard project={project} />)}
+        {projects.map((project, index) => <DesktopProjectCard project={project} index={index} />)}
       </div>
     </section>
   );

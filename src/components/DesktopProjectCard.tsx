@@ -1,13 +1,13 @@
 import type { ProjectType } from "@/@types/project";
 import { ArrowUpRight } from "lucide-react";
 
-function DesktopProjectCard({ project }: { project: ProjectType }) {
+function DesktopProjectCard({ project, index }: { project: ProjectType, index: number }) {
   const { id, title, image, description, techs, link } = project;
 
   return (
     <div className="desktopProjectCard">
       {/* PROJECT DETAILS */}
-      <div className="text-start w-[70%] flex flex-col gap-5">
+      <div className={`w-[70%] flex flex-col gap-5 ${index % 2 !== 0 ? "items-end" : "text-start"}`}>
         <span className="font-bak text-2xl mb-7">0{id}</span>
         <div>
           {techs.map((tech) => (
