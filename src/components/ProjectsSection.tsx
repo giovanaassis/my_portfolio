@@ -12,8 +12,8 @@ function ProjectsSection() {
       <p>Meus principais projetos</p>
 
       <div className="w-full flex flex-col items-center justify-center mt-20 lg:gap-10 lg:odd:text-right">
-        {projects.map(project => <MobileProjectCard project={project} />)}
-        {projects.map((project, index) => <DesktopProjectCard project={project} index={index} />)}
+        {projects.map(project => <MobileProjectCard project={project} key={project.id} />)}
+        {projects.map((project, index) => <DesktopProjectCard project={project} index={index} key={project.id} />)}
       </div>
     </section>
   );
