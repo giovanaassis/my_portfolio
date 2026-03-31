@@ -9,7 +9,7 @@ function DesktopProjectCard({ project, index }: { project: ProjectType, index: n
       {/* PROJECT DETAILS */}
       <div className={`w-[70%] flex flex-col gap-5 ${index % 2 !== 0 ? "items-end" : "text-start"}`}>
         <span className="font-bak text-2xl mb-7">0{id}</span>
-        <div>
+        <div className="flex flex-wrap">
           {techs.map((tech) => (
             <span className="projectTechs">{tech}</span>
           ))}
@@ -35,7 +35,7 @@ function DesktopProjectCard({ project, index }: { project: ProjectType, index: n
         <img
           src={image}
           alt={`project ${title} image`}
-          className={`w-full h-full ${(id === 1 || id === 5) && "object-left"} object-cover rounded-2xl`}
+          className={`w-full h-full ${(id === 1) && "object-left"} object-cover rounded-2xl`}
         />
       </div>
     </div>

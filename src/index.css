@@ -236,12 +236,8 @@
     @apply hidden lg:flex w-full max-w-[1700px] h-100 border-7 border-secondary-purple border-dashed rounded-2xl p-5 gap-10 items-center bg-background dark:border-primary-purple;
   }
 
-  .desktopProjectCard:nth-of-type(odd) {
+  .desktopProjectCard:nth-of-type(even) {
     flex-direction: row-reverse;
-  }
-
-  .desktopProjectCard:nth-child(odd) > div > a {
-    text-align: right;
   }
 
   .techStacks {

@@ -4,6 +4,5 @@ export type ProjectType = {
     description: string;
     image: string;
     techs: string[];
-    repo: string;
     link: string;
 }
