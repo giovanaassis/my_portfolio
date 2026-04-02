@@ -20,11 +20,6 @@ import postman from "@/assets/icons/techStack/postman.svg";
 
 import type { StackCategory } from "@/@types/stackCategory";
 
-// frontend => html, css, javascript, typescript, react, tailwindcss, sass, nextjs
-// backend => nodejs, python
-// database => postgresql, mySql
-// tools => git, github, figma, postman
-
 export const stacks: Record<StackCategory, { icon: string; name: string }[]> = {
   "front-end": [
     { icon: html, name: "HTML" },
