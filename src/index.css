@@ -225,7 +225,7 @@
   }
 
   .mobileProjectCard {
-    @apply w-full h-[200px] bg-lilac rounded-xl shadow-2xl shadow-dark-purple dark:shadow-primary-purple border-2 -mt-20 z-10 cursor-pointer hover:-translate-y-4 duration-150;
+    @apply w-full md:w-[400px] h-[200px] bg-lilac rounded-xl shadow-2xl shadow-dark-purple dark:shadow-primary-purple border-2 -mt-20 z-10 cursor-pointer hover:-translate-y-4 duration-150;
   }
 
   .mobileProjectCard:first-child {
