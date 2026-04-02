@@ -3,6 +3,8 @@
 
 import { useState } from "react";
 import HighlightText from "./HighlightText";
+import { stacks } from "@/data/stacks";
+import type { StackCategory } from "@/@types/stackCategory";
 
 // function TechStackSection() {
 //   const frontendStack: string[] = [
@@ -85,8 +87,9 @@ import HighlightText from "./HighlightText";
 // export default TechStackSection;
 
 function TechStackSection() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("front-end");
-  const stackCategories = [
+  const [selectedCategory, setSelectedCategory] =
+    useState<StackCategory>("front-end");
+  const stackCategories: StackCategory[] = [
     "front-end",
     "back-end",
     "banco de dados",
@@ -111,6 +114,18 @@ function TechStackSection() {
           </li>
         ))}
       </ul>
+
+      <div className="w-full flex my-10 flex-wrap gap-5 items-center justify-center lg:gap-10">
+        {stacks[selectedCategory].map(({ icon, name }) => (
+          <div
+            className="flex flex-col items-center justify-center gap-3 uppercase bg-background w-20 font-medium text-sm lg:text-lg lg:w-30"
+            key={name}
+          >
+            <img src={icon} alt={name} className="w-10 lg:w-15" />
+            <span>{name}</span>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
