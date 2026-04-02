@@ -244,31 +244,6 @@
     @apply relative hover:text-secondary-purple dark:hover:text-lilac after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-secondary-purple after:transition-all after:duration-300 hover:after:w-full;
   }
 
-  .techStacks {
-    @apply text-primary-purple dark:text-word;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    gap: 20px;
-    font-weight: 500;
-  }
-
-  .tertiaryButton {
-    background-color: var(--color-light-purple);
-    color: var(--color-secondary-purple);
-    font-size: 1.3rem;
-    border-radius: 5px;
-    width: 20rem;
-    border: 2px solid transparent;
-    transition: all 0.2s ease;
-  }
-
-  .tertiaryButton:hover {
-    border: 2px solid var(--color-secondary-purple);
-  }
-
   .inputs {
     color: var(--color-dark-purple);
     border: 2px solid lightgray;
@@ -278,6 +253,7 @@
     padding: 5px;
     width: 100%;
     letter-spacing: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.651);
   }
 
   .inputs:focus-within {

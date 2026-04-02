@@ -1,18 +1,13 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import HighlightText from "./HighlightText";
 
 function ContactSection() {
-  const { t } = useTranslation("contact");
-  const navItems = t("navItems", {
-    returnObjects: true,
-    ns: "home",
-  }) as string[];
-
   return (
-    <section id={navItems[4]} className="scroll-mt-30">
-      <h1 className="highlightTitle mx-auto">{t("title")}</h1>
+    <section id="contato" className="scroll-mt-30 text-center">
+      <h2 className="subtitle">Onde me <HighlightText>encontrar?</HighlightText></h2>
+      <p>Minhas redes de contato</p>
 
       <div className="flex flex-col items-center justify-center gap-15 mt-20 lg:flex-row">
         {/* MY SOCIALS */}
@@ -21,26 +16,26 @@ function ContactSection() {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ amount: 0.5 }}
+          viewport={{ amount: 0.5, once: true }}
         >
-          <button className="tertiaryButton">
+          <button className="gradientButton text-xl w-70">
             <a
-              href="https://www.linkedin.com/in/giovanadeassis/"
+              href="https://www.linkedin.com/in/giovanadeassis"
               className="flex items-center justify-between gap-5"
             >
               <FaLinkedin />
-              <span>{t("linkedin")}</span>
+              <span>meu linkedin</span>
               <ArrowUpRight />
             </a>
           </button>
 
-          <button className="tertiaryButton">
+          <button className="gradientButton text-xl w-70">
             <a
               href="https://github.com/giovanaassis"
               className="flex items-center justify-between gap-5"
             >
               <FaGithub />
-              <span>{t("github")}</span>
+              <span>meu github</span>
               <ArrowUpRight />
             </a>
           </button>
@@ -63,7 +58,7 @@ function ContactSection() {
             type="text"
             name="name"
             id="name"
-            placeholder={t("form-name")}
+            placeholder="Nome"
             className="inputs"
             required
           />
@@ -79,7 +74,7 @@ function ContactSection() {
           <textarea
             name="message"
             id="message"
-            placeholder={t("form-message")}
+            placeholder="Sua mensagem aqui..."
             rows={10}
             className="inputs"
             required
@@ -89,7 +84,7 @@ function ContactSection() {
             type="submit"
             className="primaryButton w-full lg:w-[50%] lg:self-start"
           >
-            {t("submit-button")}
+            Enviar
           </button>
           <input
             type="hidden"
