@@ -23,7 +23,6 @@
   --font-bak: "Bakbak One", sans-serif;
 
   --animate-scroll: scroll 5s linear infinite;
-  --animate-bounce: bounce 1.5s infinite;
 
   --shadow-lg:
     0 3px 13px 3px rgb(0 0 0 / 0.1), 0px 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -31,16 +30,6 @@
   @keyframes scroll {
     to {
       transform: translateX(calc(-100% - 32px));
-    }
-  }
-
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translateY(-10%);
-    }
-    50% {
-      transform: translateY(0);
     }
   }
 }
@@ -118,7 +107,7 @@
     right: 0;
     z-index: 1;
     min-height: 100vh;
-    @apply bg-light-purple text-secondary-purple dark:bg-gradient-to-r from-[#3c096c] to-[#7512d2] dark:text-white;
+    @apply bg-light-purple text-white dark:bg-gradient-to-r from-[#3c096c] to-[#7512d2];
     padding-top: 10rem;
     width: 50%;
     display: flex;

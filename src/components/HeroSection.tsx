@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import Programmer from "@/assets/icons/programmer.svg";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
+import { bounce } from "@/lib/animations";
 
 function HeroSection() {
   return (
@@ -50,10 +51,11 @@ function HeroSection() {
 
         {/* HERO IMAGE */}
         <div>
-          <img
+          <motion.img
+            {...bounce}
             src={Programmer}
             alt="draw of a programmer"
-            className="animate-bounce w-30 lg:-mt-20 md:w-60 shadow-lg shadow-primary-purple rounded-full"
+            className="w-30 md:w-60 lg:-mt-20 shadow-lg shadow-primary-purple rounded-full"
           />
         </div>
       </motion.section>

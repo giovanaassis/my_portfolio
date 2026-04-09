@@ -39,3 +39,8 @@ export const fadeDown = {
   transition: { duration: 0.4 },
   viewport: { once: true },
 };
+
+export const bounce = {
+  animate: { y: [0, -15, 0] },
+  transition: { duration: 1.2, repeat: Infinity, ease: "easeInOut" } as const,
+};
