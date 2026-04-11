@@ -34,6 +34,8 @@
   }
 }
 
+/* DARK MODE VARIANTS */
+
 .dark {
   --color-background: var(--color-dark-purple);
   --color-highlight: var(--color-secondary-purple);
@@ -41,6 +43,14 @@
 }
 
 @layer base {
+  ::-webkit-scrollbar {
+    @apply w-4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-purple;
+  }
+
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
